@@ -5,20 +5,20 @@ const sequelize = require('../config/connection.js');
 class Category extends Model {}
 
 Category.init(
-  // {
-  //   id: DataTypes.INTEGER,
-  //   allowNull: false,
-  // },
+
   {
-    category_name: DataTypes.STRING,
+
+  category_name:{
+    type: DataTypes.STRING,
     allowNull: false,
   },
+},
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: 'Category',
   }
 );
 
